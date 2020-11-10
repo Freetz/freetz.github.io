@@ -8,3 +8,5 @@ You can browse the wiki as a set of [GitHub pages](https://freetz.github.io/). _
 look like Trac pages due to the simple crawling approach used to create the copy.)_
 
 The Freetz source code can be found in [this GitHub repository](https://github.com/Freetz/freetz).
+
+The extracted pages are not updated anymore. So anything in there is possibly outdated!
