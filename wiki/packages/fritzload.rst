@@ -1,0 +1,52 @@
+.. _FritzLoad:
+
+FritzLoad
+=========
+
+`​FritzLoad <http://sourceforge.net/apps/trac/avmload/>`__ ist eine
+Software die automatisiert Dateien von bzw. zu Sharehostern herunter-
+und hochladen kann und diese auf einem gemounteten Medium (z.B.
+USB-Stick) ablegt.
+
+| |Warning| Es ist kein Bestandteil von Freetz und wird nicht von Freetz
+  supportet!
+| Bei Fragen oder Problemen bitte auf der `​FritzLoad
+  Homepage <http://sourceforge.net/apps/trac/avmload/>`__ oder im
+  passenden
+  `​IPPF-Thread <http://www.ip-phone-forum.de/showthread.php?t=147334>`__
+  nachschauen.
+
+.. _ProblememitFreetz:
+
+Probleme mit Freetz
+-------------------
+
+Es hat sich gezeigt, dass FritzLoad
+
+-  das Starten der Fritzbox durch eine Warteschleife verzögert
+   (`​Link <http://sourceforge.net/apps/trac/avmload/ticket/1320>`__)
+-  Probleme mit external und onlinechanged verursacht
+-  es sich nicht ordnungsgemäß beendet und damit das Aushängen von
+   Datenträgern verhindert (`#910 </ticket/910>`__)
+
+|Warning| Deshalb: Vor einer Ticketerstellung bitte ohne FritzLoad testen.
+
+.. _GründeundmöglicheLösungen:
+
+Gründe und mögliche Lösungen
+----------------------------
+
+FritzLoad installiert in rc.custom das selbe Script das ohne Freetz in
+debug.cfg genutzt würde. Dadurch werden unnötige Warteschleifen
+hinzugefügt und rc.custom läuft dauerhaft.
+
+Eine bessere und Freetz-konformere Lösung wäre hier ein separates
+Init-Script für Freetz dem Paket hinzuzufügen das in autorun.sh
+gestartet und in autostop.sh gestoppt würde. Auf jegliche Installation
+jenseits Entpacken auf den Stick könnte dann auch verzichtet werden, und
+FritzLoad wäre zur Fehlersuche jederzeit im Handumdrehen "abziehbar".
+
+Diese Lösung sollte dann auch vom FritzLoad Autor gepflegt werden.
+
+.. |Warning| image:: ../../chrome/wikiextras-icons-16/exclamation.png
+

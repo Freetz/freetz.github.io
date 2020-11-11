@@ -1,0 +1,45 @@
+.. _Aussehenvonmounted.cgi:
+
+Aussehen von mounted.cgi
+========================
+
+Das Aussehen von mounted.cgi (Balken für die Größe der internen und
+eingebundenen Medien) kann in menuconfig festgelegt werden. Folgende
+Darstellungsarten sind möglich:
+
+.. _Farbig:
+
+Farbig
+------
+
+Überwiegend grüne Balken, die nach dem Mount-zustand ihre Farbe in
+dunkelblau verändern können. Andere Informationen sind durch
+unterschiedliche Farben gekennzeichnet. Wer in seinem Hirn einen
+ausgebildeten Farbenfilter als Unterscheidung zwischen diversen
+Informationen eingebaut pflegt, der wird es schätzen. Für besonders
+Farbempfindliche unter uns, die durch eine bunte Farbenvielfalt in den
+Wahnsinn getrieben werden, wird diese Einstellung nicht emfohlen.
+
+.. figure:: /screenshots/135.png
+   :alt: mounted.cgi farbig
+
+   mounted.cgi farbig
+
+.. _Grau:
+
+Grau
+----
+
+Wird für farbblinde und für besonders farbempfindliche Personen
+empfohlen. In diesem Design wurde versucht durch die Grauskala die
+Vielfalt der bunten Farben möglichst getreu nachzubilden. Ob es
+letztendlich überall gelungen ist, darüber lässt sich bekanntlich
+streiten. Dies war nicht mein Favorit bei der Anpassung von mounted.cgi
+und wurde lediglich auf eine besondere Anfrage im Forum und aus
+historischen Gründen basierend auf einem entsprechenden Patch in FREETZ
+übernommen.
+
+.. figure:: /screenshots/136.png
+   :alt: mounted.cgi grau
+
+   mounted.cgi grau

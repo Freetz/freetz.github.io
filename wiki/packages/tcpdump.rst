@@ -1,0 +1,48 @@
+tcpdump
+=======
+
+`​tcpdump <http://www.tcpdump.org/>`__ ist ein
+Netzwerk-\ `​Sniffer <http://de.wikipedia.org/wiki/Sniffer>`__ (zu
+Deutsch: Netzwerk-Schnüffler) - oder, etwas eleganter ausgedrückt: ein
+Netzwerk- Diagnoseprogramm. Es ist standardmäßig bei allen
+Linux-Distributionen dabei und existiert auch für andere UNIX-Derivate.
+Es ist zwar relativ schwer zu bedienen, und die Ausgabe auch recht
+schwer zu lesen - weswegen *tcpdump* gegenüber Sniffern wie
+`​Wireshark <http://de.wikipedia.org/wiki/Wireshark>`__, die über eine
+grafische Oberfläche verfügen, gewisse Nachteile hat. Der Vorteil
+insbesondere für die FritzBox liegt aber genau in diesem Nachteil, da
+auf der Box kein X installiert ist (oder war etwa jemand so wahnsinnig,
+und hat das gemacht?). |:o|
+
+.. _Warning:
+
+Warning
+-------
+
+A lot of traffic will use a lot of CPU, even if that traffic isn't
+monitored. However, filtering by network adapter helps.
+
+.. _WeiterführendeLinks:
+
+Weiterführende Links
+--------------------
+
+-  `​tcpdump Homepage <http://www.tcpdump.org/>`__
+-  `​tcpdump Man page <http://www.tcpdump.org/tcpdump_man.html>`__
+-  `​Wikipedia Artikel <http://de.wikipedia.org/wiki/Tcpdump>`__
+-  `​Linux-Wiki Artikel <http://www.linuxwiki.de/TcpDump>`__
+-  `​kurzer tcpdump
+   Workshop <http://linuxseiten.kg-it.de/index.php?index=security_tcpdump>`__
+-  `​noch ein kleiner
+   Workshop <http://www.tippscout.de/tcpdump-unter-linux-netzwerk-verkehr-aufzeichnen-mit-tcpdump_tipp_2180.html>`__
+
+--------------
+
+-  Tags
+-  `console </tags/console>`__
+-  `network </tags/network>`__
+-  `packages <../packages.html>`__
+-  `tools </tags/tools>`__
+
+.. |:o| image:: ../../chrome/wikiextras-icons-16/smiley-surprise.png
+

@@ -1,0 +1,18 @@
+.. _Bird:
+
+Bird
+====
+
+**Bird** ist die OpenSource Implementierung eines TCP/IP Routing Daemons
+für Unix/Linux Systeme. Es unterstützt sowohl IPv4 als auch IPv6,
+multiple Routing-Tabellen, BGP, RIP und OSPF Routing-Protokolle, sowie
+statische Routen.
+
+Nähere Informationen finden sich auf der
+`​Homepage <http://bird.network.cz/>`__ des Projekts.
+
+-  Tags
+-  `daemons </tags/daemons>`__
+-  `network </tags/network>`__
+-  `packages <../packages.html>`__
+-  `routing </tags/routing>`__

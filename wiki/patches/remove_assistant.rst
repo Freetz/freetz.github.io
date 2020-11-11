@@ -1,0 +1,14 @@
+.. _Removeassistant:
+
+Remove assistant
+================
+
+Der Einrichtungs-Assistent wird, wenn überhaupt, ohnehin nur bei der
+erstmaligen Einrichtung der (neuen/jungfäulichen) Box benötigt. Um
+einzelne Einstellungen zu verändern, steuert man diese später direkt an
+- und ruft den Assistenten damit "nie wieder" auf. Ein guter Kandidat
+also, um ohne Funktionsverlust ein paar Kilobyte im Image
+"freizuschaufeln".
+
+-  Tags
+-  `patches <../patches.html>`__

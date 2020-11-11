@@ -1,0 +1,19 @@
+module-init-tools
+=================
+
+Das Paket **module-init-tools** (oder kurz: *m-i-t*) enthält diverse
+Programme zur Verwaltung von Kernel-Modulen - also quasi die Programme
+``insmod``, ``lsmod``, ``rmmod``, ``depmod`` und ``modprobe``.
+
+.. _WeiterführendeLinks:
+
+Weiterführende Links
+--------------------
+
+-  `​Linux-From-the-Scratch:
+   Module-Init-Tools <http://oss.erdfunkstelle.de/lfs-de/6.0/online/chapter06/module-init-tools.html>`__
+
+-  Tags
+-  `console </tags/console>`__
+-  `packages <../packages.html>`__
+-  `tools </tags/tools>`__

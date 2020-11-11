@@ -1,0 +1,117 @@
+ncftp
+=====
+
+*"NcFTP Client (also known as just NcFTP) is a set of FREE application
+programs implementing the File Transfer Protocol (FTP)."*
+
+.. _WasistNcFTP:
+
+Was ist NcFTP?
+--------------
+
+NcFTP Client ist ein FTP Client für die Kommandozeile. Er besitzt
+fortgeschrittene Funktionen wie z.B. automatisches Vervollständigen von
+Dateinamen, Hintergrundverarbeitung, Bookmarks, Herunterladen ganzer
+Verzeichnissbäume oder Verzeichniscaching.
+
+NcFTP bringt die Befehle ncftpget, ncftpput, ncftpls mit. Mit diesen
+können Dateien direkt via Kommandozeilenbefehl herunter- oder
+heraufgeladen bzw. Verzeichnisse angezeigt werden. Dies ist besonders
+für Shell-Scripte äußerst hilfreich.
+
+Quelle: `​apfelwiki <http://www.apfelwiki.de/Main/NcFTPClient>`__
+
+.. _WozukannNcFTPbenutztwerden:
+
+Wozu kann NcFTP benutzt werden?
+-------------------------------
+
+| 1.) Upload von Dateien ohne, dass der PC gestartet sein muß.
+| 2.) `Download <../Download.html>`__ von Datein ohne, dass der PC
+  gestartet sein muß.
+
+.. _WieinstalliereichNcFTP:
+
+Wie installiere ich NcFTP?
+--------------------------
+
+Das NcFTP-Package ist beim Bauen eines neuen Freetz-Images auszuwählen.
+Im Trunk ist NcFTP unter Packages→Testing zu finden.
+
+.. figure:: /screenshots/214.png
+   :alt: Ort im Trunk
+
+   Ort im Trunk
+
+.. _WiestarteichNcFTP:
+
+Wie starte ich NcFTP?
+---------------------
+
+Als erstes schreibt man ein Skript z.B. **upload.sh** mit folgendem
+Inhalt:
+
+.. code:: bash
+
+   nohup ncftpput -u XXX -p XXX remote-host /remote/path/ /local/path/*
+
+Anschließend startet man es per Telnet/SSH mit dem Befehl **sh
+upload.sh**.
+
+.. _WieistderBefehlimupload.sh-Skriptaufgebaut:
+
+Wie ist der Befehl im upload.sh-Skript aufgebaut?
+-------------------------------------------------
+
+.. code:: bash
+
+   nohup ncftpput -u (Username) -p (Password) -m (Adresse des FTP-Servers) /(Zielordner auf dem FTP)/ /(Pfad zum lokalen/eigenen Ordner)/*
+
+Beispiel:
+
+.. code:: bash
+
+   nohup ncftpput -u freetz -p mypass -m mustermann.no-ip.org /Uploads/ /var/media/ftp/uStor01/User/Mustermann/Downloads/*
+
+| **Zur Info:** Das **nohup** sorgt dafür das das Skript weiter läuft
+  obwohl Putty beendet wird.
+
+.. _WiesiehtderBefehlfüreindownload.shSkriptaus:
+
+Wie sieht der Befehl für ein download.sh Skript aus?
+----------------------------------------------------
+
+.. code:: bash
+
+   nohup ncftpget -u (Username) -p (Password) (Ziel-FTP) (local-Verzeichnis) /(remote-Verzeichnis)/*
+
+Beispiel:
+
+.. code:: bash
+
+   nohup ncftpget -u freetz -p mypass mustermann.no-ip.org /var/media/ftp/uStor01/Downloads /Downloads/*
+
+.. _WiekannicheinenabweichendenPortnutzen:
+
+Wie kann ich einen abweichenden Port nutzen?
+--------------------------------------------
+
+Falls nicht der Standard-Port (21) genutzt werden soll kann man den
+gewünschten Port über den Parameter **-P xx** angeben. Der angegebene
+Port sollte natürlich zu dem Port passen auf dem der Server hört.
+
+.. code:: bash
+
+   nohup ncftpput -u (Username) -p (Password) -P (Ziel-Port) -m (Adresse des FTP-Servers) /(Zielordner auf dem FTP)/ /(Pfad zum lokalen/eigenen Ordner)/*
+
+Beispiel:
+
+.. code:: bash
+
+   nohup ncftpput -u freetz -p mypass -P 1234 -m mustermann.no-ip.org /Uploads/ /var/media/ftp/uStor01/User/Mustermann/Downloads/*
+
+-  Tags
+-  `filetransfer </tags/filetransfer>`__
+-  `ftp </tags/ftp>`__
+-  `network </tags/network>`__
+-  `packages <../packages.html>`__

@@ -1,0 +1,8 @@
+.. _Allgemeines:
+
+Allgemeines
+===========
+
+In dieser Rubrik finden sich allgemeine Themen - und vielleicht auch
+das, was sich woanders nicht recht einsortieren ließ. Was das genau ist,
+lässt sich dem Inhaltsverzeichnis zur Rechten übernehmen.

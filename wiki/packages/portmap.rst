@@ -1,0 +1,30 @@
+portmap
+=======
+
+Der **portmap**-Dienst ist ein dynamischer Port-Zuweisungs-Daemon für
+`​RPC <http://de.wikipedia.org/wiki/Remote_Procedure_Call>`__-Dienste
+wie `​NIS <http://de.wikipedia.org/wiki/Network_Information_Service>`__
+und `​NFS <http://de.wikipedia.org/wiki/Network_File_System>`__. Es
+besitzt schwache Authentifizierungsmechanismen und hat die Fähigkeit,
+eine große Bandbreite an Ports für die von ihm kontrollierten Dienste
+zuzuweisen.
+
+*Portmap* wird u.a. vom `NFS <nfs.html>`__ Paket benötigt.
+
+.. _WeiterführendeLinks:
+
+Weiterführende Links
+--------------------
+
+-  `​Portmap Man page <http://www.manpagez.com/man/8/portmap/>`__
+-  `​Portmap
+   absichern <http://www.linuxtopia.org/online_books/deutsch/redhat_linux_security_guide/s1-server-port.html>`__
+   (Redhat Security Guide)
+-  `​Wikipedia Artikel <http://en.wikipedia.org/wiki/Portmap>`__
+   (Englisch)
+
+--------------
+
+-  Tags
+-  `network </tags/network>`__
+-  `packages <../packages.html>`__

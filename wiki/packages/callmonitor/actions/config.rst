@@ -1,0 +1,151 @@
+.. _FritzBox-Konfiguration:
+
+FritzBox-Konfiguration
+======================
+
+Mit der Aktion ``config`` aus der ``config.sh`` (seit Callmonitor 1.8)
+lassen sich einige Funktionen in der Konfiguration der FritzBox
+umstellen.
+
+.. _Portforwarding:
+
+Portforwarding
+--------------
+
+Das Portforwarding kann aktiviert und deaktiviert werden.
+
+.. code:: bash
+
+   Syntax:
+     config forward <NUMMER> <on|off|toggle>
+
+       NUMMER                 Nummer des Portforwardings (beginnend bei 1)
+       on|off|toggle          an- bzw. abschalten des Portforwardings: an, aus,
+                              an-/abschalten des Forwardings abhängig der bereits
+                              erfolgten Einstellung
+
+Beispiele:
+
+::
+
+   config forward 1 on     # 1. Portforwarding aktivieren
+   config forward 3 off    # 3. Portforwarding deaktivieren
+   config forward 5 toggle # 5. Portforwarding an-/abschalten
+
+.. _WLAN:
+
+WLAN
+----
+
+Das WLAN kann aktiviert und deaktiviert werden.
+
+.. code:: bash
+
+   Syntax:
+     config wlan [2.4|5|guest] <on|off>
+
+       2.4|5                  gewünschtes Frequenzband: 2,4 oder 5 GHz
+       guest                  Gast-WLAN schalten (seit Version 1.20.1)
+       on|off                 an- bzw. abschalten des WLANs
+
+Fehlt die Angabe des Frequenzbandes, werden beide geschaltet, aber nur
+das 2,4er abgefragt.
+
+Beispiele:
+
+::
+
+   config wlan off      # WLAN aus
+   config wlan on       # WLAN an
+   config wlan 2.4 off  # WLAN im 2,4-GHz-Band aus
+   config wlan 5 on     # 5-GHz-WLAN an
+
+.. _DECT:
+
+DECT
+----
+
+DECT kann aktiviert und deaktiviert werden.
+
+.. code:: bash
+
+   Syntax:
+     config dect <on|off>
+
+       on|off                 an- bzw. abschalten der DECT-Hardware
+
+Beispiele:
+
+::
+
+   config dect off      # DECT aus
+   config dect on       # DECT an
+
+.. _SIP:
+
+SIP
+---
+
+Die SIP-Accounts können aktiviert und deaktiviert werden.
+
+.. code:: bash
+
+   Syntax:
+     config sip <NUMMER> <on|off>
+
+       NUMMER                 Nummer des SIP-Accounts (beginnend bei 1)
+       on|off                 an- bzw. abschalten des SIP-Accounts
+
+Beispiele:
+
+::
+
+   config sip 4 on      # 4. SIP-Account aktivieren
+   config sip 2 off     # 2. SIP-Account deaktivieren
+
+.. _Rufumleitung:
+
+Rufumleitung
+------------
+
+(De-)Aktivierung der Rufumleitungen. (Seit Version 1.8.2) Unterstützt
+werden momentan nur Rufumleitungen des Typs "Anrufe von Rufnummer xy",
+nicht aber "Alle Anrufe an Fon X".
+
+.. code:: bash
+
+   Syntax
+     config diversion <NUMMER> <on|off>
+
+       NUMMER                 Nummer der Rufumleitung (beginnend bei 1)
+       on|off                 an- bzw. abschalten der Rufumleitung
+
+.. _AbfragenvonKonfigurationswerten:
+
+Abfragen von Konfigurationswerten
+---------------------------------
+
+(seit Version 1.9.1)
+
+Einfach beim config-Aufruf den Wert weglassen:
+
+::
+
+   config sip 2
+   config diversion 1
+   config forward 3
+   config wlan
+
+Ausgabe ist einer der Werte "on", "off" oder "error" (wenn z.B. die
+Wahlregel nicht existiert).
+
+.. _Alternative:
+
+Alternative
+===========
+
+In neueren Firmware-Versionen ist der Callmonitor nicht unbedingt
+erforderlich, um die Funktionen anzuzeigen oder zu ändern. Alternativ
+lassen sich diese mit dem
+`​ctlmgr_ctl <http://wehavemorefun.de/fritzbox/index.php/Ctlmgr_ctl>`__
+von AVM bearbeiten.

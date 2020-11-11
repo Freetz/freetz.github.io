@@ -1,0 +1,11 @@
+`Englische Beschreibung <enum.en.html>`__
+
+Dieser Patch macht in AVM-WebIf eine Konfigurationsmöglichkeit sichtbar,
+mit der man die Fritzbox vor jedem ausgehenden Gespräch einen
+`​ENUM <http://de.wikipedia.org/wiki/Telephone_Number_Mapping>`__-Lookup
+machen lassen kann. Dies funktioniert jedoch nur mit Firmwares bis
+Version xx.04.59, da AVM in den nachfolgenden Firmwares die Funktion
+entfernt und bisher nicht wieder eingebaut hat.
+
+-  Tags
+-  `patches <../patches.html>`__

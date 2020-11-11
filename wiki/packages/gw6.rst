@@ -1,0 +1,21 @@
+gw6
+===
+
+gw6 ist ein IPv6 Client für
+`​gogo6/freenet6 <http://gogonet.gogo6.com/page/freenet6-services>`__
+
+| Eine anonyme Nutzung ohne Registrierung ist möglich, mit einem Account
+  hingegen bekommt man ein ganzes Subnetz zugeteilt.
+| Falls es Probleme beim Einloggen gibt kann man einen eigenen
+  Broker-Server einstellen, z.B. amsterdam.freenet6.net
+
+.. _Alternativen:
+
+Alternativen
+------------
+
+-  `Aiccu <aiccu.html>`__ für SixXS
+
+-  Tags
+-  `network </tags/network>`__
+-  `packages <../packages.html>`__

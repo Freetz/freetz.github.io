@@ -1,0 +1,45 @@
+.. _FUSE:
+
+FUSE
+====
+
+`​FUSE <http://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__
+(`​Filesystem <http://de.wikipedia.org/wiki/Dateisystem>`__ in
+`​Userspace <http://de.wikipedia.org/wiki/Userspace>`__) ist ein
+`​Kernel-Modul <http://de.wikipedia.org/wiki/Kernel-Modul>`__, das es
+ermöglicht, Dateisystem-Treiber aus dem
+`​Kernel-Mode <http://de.wikipedia.org/wiki/Betriebssystemkern>`__ in
+den `​User-Mode <http://de.wikipedia.org/wiki/Ring_(CPU)>`__ zu
+verlagern. Auf diese Weise können auch nicht-priviligierte Benutzer
+(also jene, die nicht *root* heißen) Dateisysteme einbinden bzw.
+erstellen. Die *FUSE* Module agieren quasi als "Bridge" zu den
+Kernel-Schnittstellen.
+
+*FUSE* lässt sich besonders gut einsetzen, um virtuelle Dateisysteme zu
+verwirklichen. Anders als bei traditionellen Dateisystemen, die sich um
+das Speichern und Laden von Daten auf der Disk zu kümmern haben,
+speichern virtuelle Dateisysteme selbst keine Daten. Sie sind vielmehr
+eine "View" oder "Übersetzung" eines bereits existierenden Datei- oder
+Speichersystems. Im Prinzip kann jede für *FUSE* verfügbare Resource als
+Dateisystem exportiert werden.
+
+In Freetz basiert z.B. das `NTFS <ntfs-3g.html>`__ Paket auf *FUSE*.
+
+.. _WeiterführendeLinks:
+
+Weiterführende Links
+--------------------
+
+-  `​Wikipedia:
+   FUSE <http://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__
+-  `​FUSE Project Homepage <http://fuse.sourceforge.net/>`__
+   (Sourceforge)
+-  `​Official list of FUSE
+   filesystems <http://fuse.sourceforge.net/wiki/index.php/FileSystems>`__
+-  `​Develop your own filesystem with
+   FUSE <http://www.ibm.com/developerworks/linux/library/l-fuse/>`__
+-  s3fslite für Freetz: `#796 </ticket/796>`__
+
+-  Tags
+-  `filesystem </tags/filesystem>`__
+-  `packages <../packages.html>`__

@@ -1,0 +1,57 @@
+.. _BenachrichtigungaufeinemSamsungTV:
+
+Benachrichtigung auf einem Samsung TV
+=====================================
+
+Die Funktion ``samsung`` verschickt eine Benachrichtigung über einen
+Telefonanruf mit Hilfe der SOAP-Methode an ein Samsung TV:
+
+.. code:: bash
+
+   samsung {IP des TV}
+
+Also z.B.:
+
+.. code:: bash
+
+   samsung 192.168.178.19
+
+Es werden der Anrufer-Name (sofern im Telefonbuch oder in den Callers
+eingetragen, ansonsten die Telefonnummer), die angerufene Nummer, sowie
+Datum und Uhrzeit angezeigt. Die Länge der darstellbaren Zeichen hängt
+vom Inhalt ab. Wenn nicht mehr Text angezeigt werden kann (z.B. bei
+Adresszusätzen in den Callers), wird er am Ende abgeschnitten, so dass
+er mit "…" endet.
+
+Der Listener-Eintrag im Callmonitor kann dazu z.B. so aussehen:
+
+.. code:: bash
+
+   in:request ^ ^ samsung tv
+
+Zum Testen kann man folgendes direkt vom Terminal der Fritzbox
+ausführen:
+
+.. code:: bash
+
+   callaction samsung tv
+
+| 
+| Die Funktion ``samsung_text`` verschickt eine Nachricht mit Hilfe der
+  SOAP-Methode an ein Samsung TV, z.B.:
+
+.. code:: bash
+
+   echo "Hello, world!" | callaction samsung_text 192.168.178.19 \
+   --from="Absender" --from-number="069 123456" \
+   --to-number="089 987654" --to="Empfänger" \
+   --date="2010-05-21" --time="21:56:00"
+
+Analog zum obigen Beispiel werden hier Anrufer-Name und dessen
+Telefonnummer, Empfänger-Name und dessen Telefonnummer sowie Datum und
+Uhrzeit angezeigt. D.h. die Nachricht wird mit derselben Methode (SOAP)
+wie bei der Benachrichtigung über einen Telefonanruf verschickt, zzgl.
+der o.g. Daten.
+
+-  Tags
+-  `samsung </tags/samsung>`__

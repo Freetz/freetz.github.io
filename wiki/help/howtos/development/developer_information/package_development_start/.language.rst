@@ -1,0 +1,19 @@
+.. _a.language:
+
+.language
+~~~~~~~~~
+
+The .language file list the files with ``lang`` statements.
+
+Below a generic .language file with only one file listed:
+
+.. code:: bash
+
+   languages
+   { de en }
+   default
+   { en }
+   files
+   {
+           usr/lib/cgi-bin/<package>.cgi
+   }

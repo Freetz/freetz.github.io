@@ -1,0 +1,16 @@
+authorized-keys
+---------------
+
+The authorized_keys allows you to access the router with pre-shared keys
+i.s.o. just a password. To use pre-shared keys you need to generate a
+public/private keypair and add the public key to the authorized_keys
+file.
+
+   You also need to setup your SSH client for using the pre-shared key.
+   A good howto for PuTTY can be found
+   `​here <http://www.unixwiz.net/techtips/putty-openssh.html>`__.
+
+.. figure:: /screenshots/250.jpg
+   :alt: Authorized keys setup
+
+   Authorized keys setup

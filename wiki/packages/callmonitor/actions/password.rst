@@ -1,0 +1,52 @@
+.. _BenutzernamenundPasswörter:
+
+Benutzernamen und Passwörter
+============================
+
+Alle Aktionen, die auf ``getmsg`` basieren, verstehen folgende Optionen,
+mit denen man Benutzername und Passwort für das Webinterface der Zielbox
+angeben kann:
+
+.. code:: bash
+
+     -U USERNAME
+     --user USERNAME
+     -P PASSWORD
+     --password PASSWORD
+
+Außerdem können die Daten in einer Kurzschreibweise direkt beim
+Hostnamen angegeben werden:
+
+.. code:: bash
+
+     USERNAME:PASSWORD@HOST:PORT
+
+.. _Beispiel:
+
+Beispiel
+--------
+
+Also zum Beispiel:
+
+.. code:: bash
+
+     dboxmessage john:secret@mydbox
+
+Das bewirkt das gleiche wie
+
+.. code:: bash
+
+     dboxmessage --user=john --password=secret mydbox
+
+oder
+
+.. code:: bash
+
+     dboxmessage -U john -P secret mydbox
+
+Oder falls die D-Box auf einem anderen als dem Standardport lauscht:
+
+.. code:: bash
+
+     dboxmessage john:secret@mydbox:3818
+     dboxmessage --user=john --password=secret --port=3818 mydbox

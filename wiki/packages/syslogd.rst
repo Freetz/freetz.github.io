@@ -1,0 +1,76 @@
+.. _Syslogd:
+
+Syslogd
+=======
+
+.. figure:: /screenshots/199.png
+   :alt: Bild der Oberfläche von Syslogd
+
+   Bild der Oberfläche von Syslogd
+
+Das Syslogd-CGI Package stellt die Konfiguration des syslog über das
+Webinterface bereit. Es kann lokal in eine Datei oder einen Ringpuffer
+oder über Netzwerk geloggt werden.
+
+Der Inhalt des Logs lässt sich über das Webinterface (Status→Syslog)
+anzeigen.
+
+Es kann entweder über **Netzwerk** oder **lokal** geloggt werden.
+
+-  Lokal gibt es die Möglichkeit in ein **Ringpuffer** zu schreiben oder
+   in eine **Datei**. Beim Ringpuffer wird, sobald der Puffer voll ist,
+   der älteste Eintrag gelöscht. Wenn lokal in eine Datei geloggt wird,
+   dann sollte sich diese auf einem USB-Medium befinden, sonst kann es
+   passieren, dass das RAM der Box voll läuft und die Box neu startet.
+-  Um mit Windows Meldungen von Syslog über das Netzwerk zu empfangen
+   kann zB die Freeware
+   `​Tftpd32 <http://tftpd32.jounin.net/tftpd32.html>`__ genutzt werden.
+
+| Wer zusätzlich die Kernelmessages im Syslog haben will kann die Option
+  **Kernel-Log-Dämon aktivieren** auswählen (funktioniert auf den Boxen
+  3270, 7240, 7270, 7320 und 7390 womöglich aufgrund von AVM-Änderungen
+  nicht).
+
+.. _Optionen:
+
+Optionen
+--------
+
+.. code:: bash
+
+   Usage: syslogd [OPTIONS]
+
+   System logging utility.
+   This version of syslogd ignores /etc/syslog.conf
+
+   Options:
+           -n              Run in foreground
+           -O FILE         Log to given file (default:/var/log/messages)
+           -l N            Set local log level
+           -S              Smaller logging output
+           -s SIZE         Max size (KB) before rotate (default:200KB, 0=off)
+           -b N            N rotated logs to keep (default:1, max=99, 0=purge)
+           -R HOST[:PORT]  Log to IP or hostname on PORT (default PORT=514/UDP)
+           -L              Log locally and via network (default is network only if -R)
+           -C[size(KiB)]   Log to shared mem buffer (read it using logread)
+
+   Usage: klogd [-c N] [-n]
+
+   Kernel logger
+
+   Options:
+           -c N    Only messages with level < N are printed to console
+           -n      Run in foreground
+
+.. _Sieheauch:
+
+Siehe auch
+----------
+
+-  `costumscript_dublesyslog <../costumscript_dublesyslog.html>`__
+
+-  Tags
+-  `cgi </tags/cgi>`__
+-  `debug </tags/debug>`__
+-  `packages <../packages.html>`__
+-  `system </tags/system>`__

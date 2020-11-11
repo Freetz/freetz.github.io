@@ -1,0 +1,10 @@
+`​ENUM <http://www.voip-info.org/wiki/view/ENUM>`__ can be used to
+translate telephone numbers into IP addresses, much alike
+`​DNS <http://en.wikipedia.org/wiki/Domain_Name_System>`__ is used to
+translate domain names into IP adresses. This makes point-to-point
+telephony possible (for example from Fritz!Box to Fritz!Box), bypassing
+(internet) telephony companies. For this you need a working SIP server.
+You can read `​here <http://www.wershoven.com/fritzbox/>`__ about how to
+setup a SIP server and
+`​here <http://www.wehavemorefun.de/fritzbox/index.php/Versteckte_Features#ENUM-Lookup>`__
+about changing the ENUM servers (both in German).
